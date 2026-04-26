@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GJR Restaurant | Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-pink: #c3336d;
+            --soft-pink: #ff85a2;
+            --bg-pink: #fff0f3;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-pink);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: var(--primary-pink);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            margin: 0;
+            color: var(--primary-pink);
+            border-bottom: 3px solid var(--primary-pink);
+            display: inline-block;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--soft-pink);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* الكارت الأبيض */
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(214, 51, 108, 0.1);
+            /* حركة خفيفة عشان يظهر بشكل حلو */
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1.5px solid #ffdae2;
+            border-radius: 10px;
+            background-color: #fff9fa;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--soft-pink);
+        }
+
+        textarea {
+            height: 70px;
+            resize: none;
+        }
+
+        .gender-box {
+            margin: 15px 0;
+            text-align: left;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+
+        .btn {
+            background-color: #e64a67;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d63351;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="logo">JJ’R</h1>
+        <p class="subtitle">Deliciously Girly, Freshly Made</p>
+    </header>
+
+    <div class="card">
+        <h2>Create Account</h2>
+        <form>
+            <div class="input-row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+
+            <input type="text" placeholder="City" required>
+            <textarea placeholder="Full Address Details"></textarea>
+
+            <div class="gender-box">
+                <span style="font-weight: 600; font-size: 0.9rem;">Gender:</span><div class="gender-options">
+                    <label style="font-size: 0.9rem;"><input type="radio" name="gender"> Female</label>
+                    <label style="font-size: 0.9rem;"><input type="radio" name="gender"> Male</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+
+</body>
+</html>
